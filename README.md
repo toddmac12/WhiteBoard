@@ -52,6 +52,30 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
+const compress = (str) => {
+let counter = 1;
+  let result = '';
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i + 1] === str[i]) {
+      counter++;
+} else {
+      if (counter === 1) {
+        result += `${str[i]}`
+      } else {
+        result += `${counter}${str[i]}`
+      }
+      counter = 1;
+    } 
+
+  }
+  console.log('result', result)
+  return result;
+}
+
+compress('aaabccdddda')
+
+
 ### Question #4: Checking for Uniqueness
 Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
 
@@ -63,6 +87,27 @@ Output: false
 Input: "copyright"
 
 Output: true
+
+const checkUnique = (str) => {
+  const obj = {};
+  let bool = true;
+
+  for (let char of str) {
+ if (!obj[char]) {
+      obj[char] = 1;
+    } else obj[char]++;
+  }
+  
+  for (let key in obj) {
+    if (obj[key] > 1) {
+      bool = false;
+    }
+  }
+return bool;
+}
+
+checkUnique("hello");
+checkUnique("copywright");
 
 ### Question #5: Array Sorting
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms - take the time to read about the following:
