@@ -37,6 +37,13 @@ Output: [7, 9, "hi", 12, 53]
 
 arrayDedupe([7, 9, "hi", 12, "hi", 7, 53])```
 
+```//Filter
+const arrayDedupe = (arr) => {
+  const newArr = arr.filter((c, i) => arr.indexOf(c) === i);
+  console.log('newArr', newArr);
+}
+arrayDedupe([7, 9, "hi", 12, "hi", 7, 53]);```
+
 ### Question #3: Compressing Strings
 Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
 
