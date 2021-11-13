@@ -109,6 +109,21 @@ return bool;
 checkUnique("hello");
 checkUnique("copywright");
 
+const uniqString = (string) => {
+  if (typeof string != 'string'){
+    return "Please enter a string.";
+  }
+  if (string.length === 1){
+    return true;
+  } else {
+    if (string.substring(1).match(string[0])){
+      return false;
+    } else {
+      return  true && uniqString(string.substring(1));
+    }
+  }
+}
+
 ### Question #5: Array Sorting
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms - take the time to read about the following:
 
@@ -140,17 +155,3 @@ const merge = (left, right) => {
     return resultArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
-const uniqString = (string) => {
-  if (typeof string != 'string'){
-    return "Please enter a string.";
-  }
-  if (string.length === 1){
-    return true;
-  } else {
-    if (string.substring(1).match(string[0])){
-      return false;
-    } else {
-      return  true && uniqString(string.substring(1));
-    }
-  }
-}
