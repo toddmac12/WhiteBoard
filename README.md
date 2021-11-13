@@ -20,7 +20,9 @@ Output: "Jasmine%20Ann%20Jones"
   return newStr;
 }
 
-stringToURL1("Jasmine Ann Jones")```
+stringToURL1("Jasmine Ann Jones")
+```
+
 
 ### Question #2: Array Deduping
 Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
@@ -42,7 +44,10 @@ const arrayDedupe = (arr) => {
   const newArr = arr.filter((c, i) => arr.indexOf(c) === i);
   console.log('newArr', newArr);
 }
-arrayDedupe([7, 9, "hi", 12, "hi", 7, 53]);```
+arrayDedupe([7, 9, "hi", 12, "hi", 7, 53])
+```
+
+
 
 ### Question #3: Compressing Strings
 Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
@@ -52,7 +57,7 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
-const compress = (str) => {
+```const compress = (str) => {
 let counter = 1;
   let result = '';
 
@@ -74,6 +79,7 @@ let counter = 1;
 }
 
 compress('aaabccdddda')
+```
 
 
 ### Question #4: Checking for Uniqueness
@@ -88,6 +94,7 @@ Input: "copyright"
 
 Output: true
 
+```
 const checkUnique = (str) => {
   const obj = {};
   let bool = true;
@@ -108,7 +115,9 @@ return bool;
 
 checkUnique("hello");
 checkUnique("copywright");
+```
 
+```
 const uniqString = (string) => {
   if (typeof string != 'string'){
     return "Please enter a string.";
@@ -123,6 +132,9 @@ const uniqString = (string) => {
     }
   }
 }
+```
+
+
 
 ### Question #5: Array Sorting
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms - take the time to read about the following:
@@ -140,6 +152,7 @@ Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
 
+```
 const merge = (left, right) => {
   let resultArray = [], leftIndex = 0, rightIndex = 0;
 
@@ -154,4 +167,5 @@ const merge = (left, right) => {
     
     return resultArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
+```
 
