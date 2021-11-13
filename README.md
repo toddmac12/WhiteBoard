@@ -139,3 +139,18 @@ const merge = (left, right) => {
     
     return resultArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
+
+const uniqString = (string) => {
+  if (typeof string != 'string'){
+    return "Please enter a string.";
+  }
+  if (string.length === 1){
+    return true;
+  } else {
+    if (string.substring(1).match(string[0])){
+      return false;
+    } else {
+      return  true && uniqString(string.substring(1));
+    }
+  }
+}
