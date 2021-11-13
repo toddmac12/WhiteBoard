@@ -124,3 +124,18 @@ Example
 Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
+
+const merge = (left, right) => {
+  let resultArray = [], leftIndex = 0, rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length)
+    if (left[leftIndex]< right[rightIndex]) {
+      resultArray.push(left[leftIndex]);
+      leftIndex ++;
+    } else {
+      resultArray.push(right[rightIndex]);
+      rightIndex++;
+    }
+    
+    return resultArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
