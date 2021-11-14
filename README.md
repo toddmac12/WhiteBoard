@@ -169,3 +169,12 @@ const merge = (left, right) => {
 }
 ```
 
+
+## Setup
+
+* Clone repo
+* Make an empty .env  file in the root directory
+* Run npm install  in the root directory
+
+## Test
+* Run npm test in the _test_ directory
