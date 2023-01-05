@@ -61,10 +61,10 @@ Output: [7, 9, "hi", 12, 53]
 
 Here is an algorithm to solve this problem without recursion:
 
-1. Initialize an empty array called output.
-2. Iterate through each element x in the input array:
-    1. If x is not in output, append it to output.
-3. Return output.
+1. Initialize an empty array called `output`.
+2. Iterate through each element `x` in the input array:
+    1. If `x` is not in `output`, append it to `output`.
+3. Return `output`.
 
 Here is an example implementation in JavaScript:
 
@@ -82,8 +82,8 @@ function removeDuplicates(input) {
 Here is an algorithm to solve this problem with recursion:
 
 1. If the input array is empty, return an empty array.
-2. Initialize an array called output with the first element of the input array.
-3. Return output concatenated with removeDuplicates called on the rest of the input array, with the first element removed.
+2. Initialize an array called 'output' with the first element of the input array.
+3. Return 'output' concatenated with 'removeDuplicates' called on the rest of the input array, with the first element removed.
 Here is an example implementation in JavaScript:
 
 ```
