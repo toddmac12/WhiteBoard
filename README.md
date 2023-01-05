@@ -63,8 +63,9 @@ Here is an algorithm to solve this problem without recursion:
 
 1. Initialize an empty array called output.
 2. Iterate through each element x in the input array:
-  1. If x is not in output, append it to output.
+    1. If x is not in output, append it to output.
 3. Return output.
+
 Here is an example implementation in JavaScript:
 
 ```
