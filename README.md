@@ -107,30 +107,57 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
-```const compress = (str) => {
-let counter = 1;
-  let result = '';
+Here is an algorithm to solve this problem without recursion:
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i + 1] === str[i]) {
-      counter++;
-} else {
-      if (counter === 1) {
-        result += `${str[i]}`
-      } else {
-        result += `${counter}${str[i]}`
-      }
-      counter = 1;
-    } 
+1. Initialize an empty string called `output`.
+2. Iterate through the characters `c` in the input string, keeping track of the previous character `prev` and a `count` count of how many times it has appeared.
+    1.If `c` is different from `prev`, append `count` and `prev` to `output` (if `count` is greater than 1) and reset `count` to 1.
+    2. Otherwise, increment `count`.
+    3. Set `pre`v to `c`.
+3. Append `count` and `pre`v to `output` (if `count` is greater than 1).
+4. Return `output`.
 
-  }
-  console.log('result', result)
-  return result;
-}
+Here is an example implementation in JavaScript:
 
-compress('aaabccdddda')
 ```
+function compress(input) {
+  let output = "";
+  let prev = "";
+  let count = 0;
+  for (let c of input) {
+    if (c !== prev) {
+      if (count > 1) {
+        output += count + prev;
+      }
+      count = 1;
+    } else {
+      count++;
+    }
+    prev = c;
+  }
+  if (count > 1) {
+    output += count + prev;
+  }
+  return output;
+}
+```
+Here is an algorithm to solve this problem with recursion:
 
+1. If the input string is empty, return an empty string.
+2. Initialize a variable count to 1.
+3. If the first character of the input string is the same as the second character, increment count and return compress called on the rest of the input string.
+4. Otherwise, return the first character + count (if count is greater than 1) + compress called on the rest of the input string.
+
+Here is an example implementation in JavaScript:
+
+```
+function compress(input) {
+  if (input.length === 0) {
+    return "";
+  }
+  let count = 1;
+  if (input[0] === input[1]) {
+```
 
 ### Question #4: Checking for Uniqueness
 Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
