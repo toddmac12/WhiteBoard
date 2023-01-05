@@ -8,20 +8,25 @@ Example
 Input: "Jasmine Ann Jones"
 
 Output: "Jasmine%20Ann%20Jones"
+Here is an algorithm to solve this problem without recursion:
 
-```const stringToURL1 = (string) => {
-  let newStr = '';
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === " ") {
-      newStr += "%20"
-    } else newStr += string[i];
+1. Initialize an empty string called output.
+2. Iterate through each character c in the input string:
+  1. If c is a space, append %20 to output.
+  2. Otherwise, append c to output.
+3. Return output.
+Here is an example implementation in JavaScript:
+```function replaceSpaces(input) {
+  let output = "";
+  for (let c of input) {
+    if (c === " ") {
+      output += "%20";
+    } else {
+      output += c;
+    }
   }
-  console.log('newStr', newStr)
-  return newStr;
-}
-
-stringToURL1("Jasmine Ann Jones")
-```
+  return output;
+}```
 
 
 ### Question #2: Array Deduping
