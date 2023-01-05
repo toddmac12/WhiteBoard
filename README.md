@@ -31,7 +31,25 @@ function replaceSpaces(input) {
   return output;
 }
 ```
+Here is an algorithm to solve this problem with recursion:
 
+1.If the input string is empty, return an empty string.
+2. If the first character of the input string is a space, return %20 + replaceSpaces called on the rest of the input string.
+3. Otherwise, return the first character of the input string + replaceSpaces called on the rest of the input string.
+
+Here is an example implementation in JavaScript:
+```
+function replaceSpaces(input) {
+  if (input.length === 0) {
+    return "";
+  }
+  if (input[0] === " ") {
+    return "%20" + replaceSpaces(input.substring(1));
+  }
+  return input[0] + replaceSpaces(input.substring(1));
+}
+```
+Both of these algorithms will work for the input "Jasmine Ann Jones" and will produce the output "Jasmine%20Ann%20Jones".
 
 ### Question #2: Array Deduping
 Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
