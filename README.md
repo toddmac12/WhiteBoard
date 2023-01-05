@@ -33,7 +33,7 @@ function replaceSpaces(input) {
 ```
 Here is an algorithm to solve this problem with recursion:
 
-1.If the input string is empty, return an empty string.
+1. If the input string is empty, return an empty string.
 2. If the first character of the input string is a space, return %20 + replaceSpaces called on the rest of the input string.
 3. Otherwise, return the first character of the input string + replaceSpaces called on the rest of the input string.
 
