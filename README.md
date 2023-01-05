@@ -15,8 +15,11 @@ Here is an algorithm to solve this problem without recursion:
   1. If c is a space, append %20 to output.
   2. Otherwise, append c to output.
 3. Return output.
+
 Here is an example implementation in JavaScript:
-```function replaceSpaces(input) {
+
+```
+function replaceSpaces(input) {
   let output = "";
   for (let c of input) {
     if (c === " ") {
@@ -26,7 +29,8 @@ Here is an example implementation in JavaScript:
     }
   }
   return output;
-}```
+}
+```
 
 
 ### Question #2: Array Deduping
