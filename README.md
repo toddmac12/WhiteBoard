@@ -171,45 +171,29 @@ Input: "copyright"
 
 Output: true
 
-```
-const checkUnique = (str) => {
-  const obj = {};
-  let bool = true;
+Here is an algorithm to solve this problem:
 
-  for (let char of str) {
- if (!obj[char]) {
-      obj[char] = 1;
-    } else obj[char]++;
-  }
-  
-  for (let key in obj) {
-    if (obj[key] > 1) {
-      bool = false;
+1. Iterate through the characters `c1` in the input string:
+  1. Iterate through the characters `c2` in the input string, starting from the character after c1:
+  1. If `c1` is equal to `c2`, return `false`.
+2. Return `true`.
+Here is an example implementation in JavaScript:
+
+```
+function areAllCharactersUnique(input) {
+  for (let i = 0; i < input.length; i++) {
+    let c1 = input[i];
+    for (let j = i + 1; j < input.length; j++) {
+      let c2 = input[j];
+      if (c1 === c2) {
+        return false;
+      }
     }
   }
-return bool;
-}
-
-checkUnique("hello");
-checkUnique("copywright");
-```
-
-```
-const uniqString = (string) => {
-  if (typeof string != 'string'){
-    return "Please enter a string.";
-  }
-  if (string.length === 1){
-    return true;
-  } else {
-    if (string.substring(1).match(string[0])){
-      return false;
-    } else {
-      return  true && uniqString(string.substring(1));
-    }
-  }
+  return true;
 }
 ```
+This algorithm iterates through each character in the input string and checks if any other character in the string is equal to it. If any duplicate characters are found, the function returns `false`. If the loop completes without finding any duplicate characters, the function returns `true`.
 
 
 
