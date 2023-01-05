@@ -144,9 +144,9 @@ function compress(input) {
 Here is an algorithm to solve this problem with recursion:
 
 1. If the input string is empty, return an empty string.
-2. Initialize a variable count to 1.
-3. If the first character of the input string is the same as the second character, increment count and return compress called on the rest of the input string.
-4. Otherwise, return the first character + count (if count is greater than 1) + compress called on the rest of the input string.
+2. Initialize a variable `count` to 1.
+3. If the first character of the input string is the same as the second character, increment `count` and return `compress` called on the rest of the input string.
+4. Otherwise, return the first character +` count` (if `count` is greater than 1) + `compress` called on the rest of the input string.
 
 Here is an example implementation in JavaScript:
 
