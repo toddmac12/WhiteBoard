@@ -174,11 +174,8 @@ Output: true
 Here is an algorithm to solve this problem:
 
 1. Iterate through the characters `c1` in the input string:
-  
-  1. Iterate through the characters `c2` in the input string, starting from the character after c1:
-  
-    1. If `c1` is equal to `c2`, return `false`.
-
+    1. Iterate through the characters `c2` in the input string, starting from the character after `c1`:
+        1. If `c1` is equal to `c2`, return `false`.
 2. Return `true`.
 
 Here is an example implementation in JavaScript:
