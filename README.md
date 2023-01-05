@@ -111,7 +111,7 @@ Here is an algorithm to solve this problem without recursion:
 
 1. Initialize an empty string called `output`.
 2. Iterate through the characters `c` in the input string, keeping track of the previous character `prev` and a `count` count of how many times it has appeared.
-    1.If `c` is different from `prev`, append `count` and `prev` to `output` (if `count` is greater than 1) and reset `count` to 1.
+    1. If `c` is different from `prev`, append `count` and `prev` to `output` (if `count` is greater than 1) and reset `count` to 1.
     2. Otherwise, increment `count`.
     3. Set `pre`v to `c`.
 3. Append `count` and `pre`v to `output` (if `count` is greater than 1).
